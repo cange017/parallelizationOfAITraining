@@ -39,7 +39,7 @@ for j in range(3):
         if (j != 0): #if it is not the first time runnning
             print 'rank 1 running network '
         #    exec(open('./paths.sh').read())
-            exec(open('./apple_stock_price_predictor_iterative1.py').read())
+            exec(open('./models/apple_stock_price_predictor_iterative1.py').read())
             # result needed is the Mean Squared Error to determine best network
             result = (np.mean(mse_test_loss_seq))
             print 'rank 1 sending result'
@@ -48,7 +48,7 @@ for j in range(3):
         else: #if it is the first time it is running
             print 'rank 1 running network '
         #    exec(open('./paths.sh').read())
-            exec(open('./apple_stock_price_predictor_initial1.py').read())
+            exec(open('./models/apple_stock_price_predictor_initial1.py').read())
             result = (np.mean(mse_test_loss_seq))
             print 'rank 1 sending result'
             mpi.send(result, 0)
@@ -56,14 +56,14 @@ for j in range(3):
         if (j != 0):
             print 'rank 2 running network '
         #    exec(open('./paths.sh').read())
-            exec(open('./apple_stock_price_predictor_iterative2.py').read())
+            exec(open('./models/apple_stock_price_predictor_iterative2.py').read())
             result = (np.mean(mse_test_loss_seq))
             print 'rank 2 sending result'
             mpi.send(result, 0)
         else:
             print 'rank 2 running network '
         #    exec(open('./paths.sh').read())
-            exec(open('./apple_stock_price_predictor_initial2.py').read())
+            exec(open('./models/apple_stock_price_predictor_initial2.py').read())
             result = (np.mean(mse_test_loss_seq))
             print 'rank 2 sending result'
             mpi.send(result, 0)
@@ -71,14 +71,14 @@ for j in range(3):
         if (j != 0):
             print 'rank 3 running network '
         #    exec(open('./paths.sh').read())
-            exec(open('./apple_stock_price_predictor_iterative3.py').read())
+            exec(open('./models/apple_stock_price_predictor_iterative3.py').read())
             result = (np.mean(mse_test_loss_seq))
             print 'rank 3 sending result'
             mpi.send(result, 0)
         else:
             print 'rank 3 running network '
         #    exec(open('./paths.sh').read())
-            exec(open('./apple_stock_price_predictor_initial3.py').read())
+            exec(open('./models.apple_stock_price_predictor_initial3.py').read())
             result = (np.mean(mse_test_loss_seq))
             print 'rank 3 sending result'
             mpi.send(result, 0)
@@ -86,14 +86,14 @@ for j in range(3):
         if (j != 0):
             print 'rank 4 running network '
         #    exec(open('./paths.sh').read())
-            exec(open('./apple_stock_price_predictor_iterative4.py').read())
+            exec(open('./models/apple_stock_price_predictor_iterative4.py').read())
             result = (np.mean(mse_test_loss_seq))
             print 'rank 4 sending result'
             mpi.send(result, 0)
         else:
             print 'rank 4 running network '
         #    exec(open('./paths.sh').read())
-            exec(open('./apple_stock_price_predictor_initial4.py').read())
+            exec(open('./models/apple_stock_price_predictor_initial4.py').read())
             result = (np.mean(mse_test_loss_seq))
             print 'rank 4 sending result'
             mpi.send(result, 0)
