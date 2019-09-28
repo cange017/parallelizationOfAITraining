@@ -1,1 +1,3 @@
-# parallelizationOfAITraining
+# Parallelization of AI Training
+
+The aim with this project is to analyze the difference between traditional AI training and this data parallelization version. The Darwinistic ideology of Natural Selection was used with the goal to make the “fittest” model survive on every epoch and, therefore, “carry” the beneficial “traits” to all the other cores that make the model learn faster. The algorithm consisted of using the same neural network that predicts stock prices of Apple from 1980-2019, but any model can be used, and training on different child cores, and once the training is done, the master node will choose the model with the least error, and then it will send the master core will send it back to the child cores for the next epoch until training is done.
